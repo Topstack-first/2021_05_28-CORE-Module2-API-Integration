@@ -1,0 +1,70 @@
+// stylelint-disable selector-max-class, selector-type-no-unknown, selector-no-qualifying-type
+
+@import "~ngx-toastr/toastr.css";
+
+$border-width: 1px;
+$border-color: rgba(0, 0, 0, 0.1);
+
+$danger-color: #f44335;
+$success-color: #0ab3a8;
+
+.toast-container {
+  .ngx-toastr {
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+    padding: 16px;
+    color: inherit;
+    background-color: #fff;
+    border: $border-width solid $border-color;
+    border-radius: 3px;
+    box-shadow: 0 7px 9px -4px lighten($color: $border-color, $amount: 50), 0 14px 21px 2px lighten($color: $border-color, $amount: 50), 0 5px 26px 4px lighten($color: $border-color, $amount: 50);
+
+    &:hover {
+      box-shadow: 0 7px 9px -4px lighten($color: $border-color, $amount: 30), 0 14px 21px 2px lighten($color: $border-color, $amount: 30), 0 5px 26px 4px lighten($color: $border-color, $amount: 30);
+    }
+
+    .toast-icon {
+      display: none;
+    }
+
+    .toast-title {
+      margin-bottom: 16px;
+    }
+
+    &.toast-success {
+      color: darken($success-color, 15%);
+      background-color: lighten($success-color, 60%);
+      background-image: none;
+      border-color: lighten($success-color, 50%);
+
+      .toast-icon.toast-icon-success {
+        display: flex;
+
+        > svg {
+          fill: darken($success-color, 15%);
+        }
+      }
+    }
+
+    &.toast-error {
+      color: darken($danger-color, 25%);
+      background-color: lighten($danger-color, 40%);
+      background-image: none;
+      border-color: lighten($danger-color, 30%);
+
+      .toast-icon.toast-icon-error {
+        display: flex;
+
+        > svg {
+          fill: darken($danger-color, 25%);
+        }
+      }
+    }
+  }
+}
+
+.toast-top-right {
+  top: 16px;
+  right: 16px;
+}

@@ -1,0 +1,31 @@
+
+<div class="">
+    <h2 class="header">
+        CORE | <span>Deep Search Setting</span>
+    </h2>
+</div>
+<nav class="">
+    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link mr"  [routerLinkActive]="['current', 'active']"
+      [routerLinkActiveOptions]="{ exact: true }"  routerLink="/core/deep-search-setting/categories">Category</a>
+        </li>
+        <li class="nav-item">
+      <a class="nav-link" [routerLinkActive]="['current', 'active']"
+      [routerLinkActiveOptions]="{ exact: false }"  routerLink="/core/deep-search-setting/stake">Stakeholder</a>
+        </li>
+        <li class="nav-item">
+      <a class="nav-link" [routerLinkActive]="['current', 'active']"
+      [routerLinkActiveOptions]="{ exact: false }" routerLink="/core/deep-search-setting/depart">Department</a>
+        </li>
+        <li class="nav-item">
+      <a class="nav-link"[routerLinkActive]="['current', 'active']"
+      [routerLinkActiveOptions]="{ exact: false }"  routerLink="/core/deep-search-setting/loc">Location</a>
+        </li>
+        <li class="nav-item">
+      <a class="nav-link" [routerLinkActive]="['current', 'active']"
+      [routerLinkActiveOptions]="{ exact: false }"  routerLink="/core/deep-search-setting/eve">Event</a>
+        </li>
+    </div>
+</nav>
+<router-outlet></router-outlet>

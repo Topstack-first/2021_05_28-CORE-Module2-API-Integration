@@ -1,0 +1,60 @@
+:host {
+  > .container-fluid {
+    padding: 20px;
+
+    .col-fixed-size {
+      max-width: 240px;
+    }
+  }
+
+  .card {
+    border-width: 0;
+    border-radius: 0;
+
+    > .card-header {
+      font-size: 1.25rem;
+    }
+
+    > .card-header,
+    > .card-body {
+      background-color: transparent;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  .alert.alert-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 210px;
+  }
+}
+
+.addScroll{
+  overflow-y:auto;
+  max-height: 300px;
+}
+
+// .fakeLink{
+//   color: #09B3A9;
+//   text-decoration: none; 
+//   background-color: transparent;
+// }
+
+.fakelinks {
+	cursor: pointer;
+	color: #09B3A9;
+	&:hover {
+		text-decoration: underline;
+	}
+	&:focus {
+		text-decoration: underline;
+	}
+	&:visited {
+		color: #09B3A9;
+	}
+	&:active {
+		color: #faa700;
+	}
+}

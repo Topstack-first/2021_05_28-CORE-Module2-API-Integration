@@ -1,0 +1,148 @@
+<div class="header">
+    Users | New User
+</div>
+<div class="subheader">
+    New User
+</div>
+<div class="container-fluid full-height mt-4">
+    <div class="row">
+        <div class="col">
+            <div class="card card-body">
+                <h2 class="heading text-primary">Name</h2>
+                <form class="form-horizontal">
+                    <div class="form-group row">
+                        <label class="control-label col-sm-2">Username</label>
+                        <div class="col-sm-10">
+                            <input class="form-control" [value]="userObject.userName"
+                                (input)="userObject.userName = $event.target.value">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="control-label col-sm-2">First Name</label>
+                        <div class="col-sm-10">
+                            <input class="form-control" [value]="userObject.firstName"
+                                (input)="userObject.firstName = $event.target.value">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="control-label col-sm-2">Last Name</label>
+                        <div class="col-sm-10">
+                            <input class="form-control" [value]="userObject.lastName"
+                                (input)="userObject.lastName = $event.target.value">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="card card-body">
+                <h2 class="heading text-primary">Account Management</h2>
+                <form class="form-horizontal">
+                    <div class="form-group row justify-content-end">
+                        <label class="control-label col-sm-2">
+                            New Password
+                            <i class="fa fa-info-circle" aria-hidden="true"></i>
+                        </label>
+                        <div class="col-sm-5">
+                            <input type="password" name="password" [(ngModel)]="password" placeholder="Password"
+                                class="form-control">
+                        </div>
+                        <div class="col-sm-5">
+                            <input type="password" name="confirmPassword" [(ngModel)]="confirmPassword"
+                                placeholder="Confirm Password" class="form-control">
+                        </div>
+                        <div class="col-sm-10 form-text text-muted">
+                            Password must be a minimum of 8 characters which contain at least one uppercase letter,
+                            one lowercase letter, one digit and one special character.
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="control-label col-sm-2">Send Notification</label>
+                        <div class="col-sm-10">
+                            <input type="checkbox" class="form-check-input ml-1" id="notificationCheck">
+                            <label class="form-check-label ml-4" for="notificationCheck">Send the new user an email about their account.</label>
+                            <!-- <select name="roleId" [(ngModel)]="userObject.roleId" class='form-control'>
+                                <option *ngFor="let role of roles" [value]="role.roleId">{{role.roleName}}</option>
+                            </select> -->
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="control-label col-sm-2">User Role</label>
+                        <div class="col-sm-10">
+                            <select name="roleId" [(ngModel)]="userObject.roleId" class='form-control'>
+                                <option *ngFor="let role of roles" [value]="role.roleId">{{role.roleName}}</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="control-label col-sm-2">Approval Status</label>
+                        <div class="col-sm-10">
+                            <select name="userApprovalStatus" class='form-control' disabled>
+                                <option value="Pending">Pending</option>
+                                <option selected value="Approved">Approved</option>
+                                <option value="Denied">Denied</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="control-label col-sm-2">Account Status</label>
+                        <div class="col-sm-10">
+                            <select name="userAccountStatus"  class='form-control' disabled>
+                                <option selected value="true">Active</option>
+                                <option value="false">Inactive</option>
+                            </select>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card card-body">
+                <h2 class="heading text-primary">Contact Info</h2>
+                <form class="form-horizontal">
+                    <div class="form-group row">
+                        <label class="control-label col-sm-2">Email</label>
+                        <div class="col-sm-10">
+                            <input class="form-control" [value]="userObject.userEmail"
+                                (input)="userObject.userEmail = $event.target.value">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="card card-body">
+                <h2 class="heading text-primary">About the User</h2>
+                <form class="form-horizontal">
+                    <div class="form-group row">
+                        <label class="control-label col-sm-2">Biographical Info</label>
+                        <div class="col-sm-10">
+                            <textarea class="form-control" rows="3" [value]="userObject.userBiography"
+                                (input)="userObject.userBiography = $event.target.value"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="control-label col-sm-2">Job Title</label>
+                        <div class="col-sm-10">
+                            <input class="form-control" [value]="userObject.jobTitle"
+                                (input)="userObject.jobTitle = $event.target.value">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="control-label col-sm-2">Department</label>
+                        <div class="col-sm-10">
+                            <select name="departmentId" [(ngModel)]="userObject.departmentId" class='form-control'>
+                                <option *ngFor="let department of departments" [value]="department.departmentId">
+                                    {{department.departmentName}}</option>
+                            </select>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="btn-holder">
+        <button type="submit" class="d-flex align-items-center btn btn-primary btn-lg mr-3"
+            [disabled]="isFormSubmitting" (click)="createNewUser()">
+            <span class="spinner-border spinner-border-sm mr-2" *ngIf="isFormSubmitting"></span>
+            <span>Create New User</span>
+        </button>
+        <a [routerLink]="['/core/users']" class="btn btn-outline-primary btn-lg">Cancel</a>
+    </div>
+</div>

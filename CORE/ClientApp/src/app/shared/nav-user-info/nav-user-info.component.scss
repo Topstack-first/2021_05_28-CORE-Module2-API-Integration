@@ -1,0 +1,14 @@
+:host {
+  .dropdown-menu {
+    min-width: 240px;
+    margin-top: 8px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-top-width: 0;
+
+    .nav-link {
+      padding-top: 11px;
+      padding-bottom: 11px;
+    }
+  }
+}

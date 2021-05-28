@@ -1,0 +1,557 @@
+<h2 class="page__header">
+    CORE | Plugin Settings 
+</h2>
+<nav class="">
+    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+      <a class="nav-link active mr" id="nav-basicSetting-tab" data-toggle="tab" href="#nav-basicSetting" role="tab" aria-controls="nav-basicSetting" aria-selected="true">Basic Settings</a>
+      <a class="nav-link" id="nav-advanceSetting-tab" data-toggle="tab" href="#nav-advanceSetting" role="tab" aria-controls="nav-advanceSetting" aria-selected="false">Advanced Settings</a> 
+    </div>
+</nav>
+<div class="tab-content pl-0" id="navTabContent">
+    <!-- basic settings section start here -->
+    <div class="tab-pane fade show active" id="nav-basicSetting" role="tabpanel" aria-labelledby="nav-basicSetting-tab"> 
+        <nav class="">
+            <div class="nav nav-tabs pl-5" id="nav-tab" role="tablist">
+              <a class="nav-link active mr" id="nav-core-tab" data-toggle="tab" href="#nav-core" role="tab" aria-controls="nav-core" aria-selected="true">CORE</a>
+              <a class="nav-link" id="nav-portal-tab" data-toggle="tab" href="#nav-portal" role="tab" aria-controls="nav-portal" aria-selected="false">Portal</a> 
+            </div>
+        </nav>
+        <div class="tab-content" id="navTabContent">
+            <!-- core settings start here -->
+            <div class="tab-pane fade show active" id="nav-core" role="tabpanel" aria-labelledby="nav-core-tab"> 
+                <div class="col-lg-6 col-md-8">
+                    <form action="" class="form-group core__settings">
+                        <table class="table mb-0 ">
+                            <tr>
+                                <td>Main Folder on Network</td>
+                                <td><input type="text" class="form-control" placeholder="\\Network\PCBL\Folder"></td>
+                            </tr>
+                            <tr>
+                                <td>Duplicate Document Detection:</td>
+                                <td><input type="text" class="form-control" placeholder="Same size and date"></td>
+                            </tr>
+                            <tr>
+                                <td>Insert Special Characters: </td>
+                                <td><input type="text" class="form-control" placeholder="#"></td>
+                            </tr>
+                            <tr>
+                                <td>Document Path Max Length: </td>
+                                <td><input type="number" class="form-control" placeholder="200"></td>
+                            </tr>
+                            <tr>
+                                <td>Max Document Size (MB): </td>
+                                <td><input type="number" class="form-control" placeholder="40"></td>
+                            </tr>
+                            <tr>
+                                <td>Minimum Characters for Extracted Document Content: </td>
+                                <td><input type="number" class="form-control" placeholder="50"></td>
+                            </tr>
+                            <tr>
+                                <td>Default Category: </td>
+                                <td>
+                                    <select name="" class="form-control">
+                                        <option value="0" selected>Select Default Category</option>
+                                        <option value="1">22</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Default SubCategory: </td>
+                                <td>
+                                    <select name="" class="form-control">
+                                        <option value="0" selected>Select Default SubCategory</option>
+                                        <option value="1">22</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Default Department: </td>
+                                <td>
+                                    <select name="" class="form-control">
+                                        <option value="0" selected>projects</option>
+                                        <option value="1">22</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Default Stakeholder: </td>
+                                <td>
+                                    <select name="" class="form-control">
+                                        <option value="0" selected>Select Default Stakeholder</option>
+                                        <option value="1">22</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Default Event: </td>
+                                <td>
+                                    <select name="" class="form-control">
+                                        <option value="0" selected>Select Default Event</option>
+                                        <option value="1">22</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Default Location: </td>
+                                <td>
+                                    <select name="" class="form-control">
+                                        <option value="0" selected>PCBL Office, Brunei</option>
+                                        <option value="1">22</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Default Well: </td>
+                                <td>
+                                    <select name="" class="form-control">
+                                        <option value="0" selected>Select Default Well</option>
+                                        <option value="1">22</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Extract Date from Content in Bulk Upload: </td>
+                                <td>
+                                    <input type="checkbox" class="form-check-input">
+                                </td>
+                            </tr>
+                        </table>
+                        <div class="text-right pt-5 pb-3">
+                            <button class="btn primary-solid-btn">Save Changes</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- portal settings start here -->
+            <div class="tab-pane fade" id="nav-portal" role="tabpanel" aria-labelledby="nav-portal-tab">
+                <div class="col-lg-6 col-md-8">
+                    <table class="table mb-0 core__settings">
+                        <tr>
+                            <td>Company Logo</td>
+                            <td>
+                                <button class="btn primary-outline-btn media__btn ml-0" (click)="openMedia()">Select Media</button>
+                                <span class="text-muted pl-3 font-weight-light">No media selected.</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Portal Logo</td>
+                            <td>
+                                <button class="btn primary-outline-btn media__btn ml-0" (click)="openMedia()">Select Media</button>
+                                <span class="text-muted pl-3 font-weight-light">No media selected.</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Favicon </td>
+                            <td>
+                                <button class="btn primary-outline-btn media__btn ml-0" (click)="openMedia()">Select Media</button>
+                                <span class="text-muted pl-3 font-weight-light">No media selected.</span>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td>Company Name: </td>
+                            <td><input type="text" class="form-control" placeholder=""></td>
+                        </tr>
+
+                        <tr>
+                            <td>Login Page Background</td>
+                            <td>
+                                <button class="btn primary-outline-btn media__btn ml-0" (click)="openMedia()">Select Media</button>
+                                <span class="text-muted pl-3 font-weight-light">No media selected.</span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Site Title</td>
+                            <td><input type="text" class="form-control" placeholder=""></td>
+                        </tr>
+
+                        <tr>
+                            <td>CORE Portal Short Name:</td>
+                            <td><input type="text" class="form-control" placeholder=""></td>
+                        </tr>
+                        
+                    </table>
+
+                    <div class="text-right pt-5 pb-3">
+                        <button class="btn primary-solid-btn">Save Changes</button>
+                    </div> 
+                </div>
+            </div>
+
+        </div>
+
+    </div><!--.//basicSettings-->
+
+
+     <!-- advanced settings section start here -->
+    <div class="tab-pane fade" id="nav-advanceSetting" role="tabpanel" aria-labelledby="nav-advanceSetting-tab">
+        <nav class="">
+            <div class="nav nav-tabs pl-5" id="nav-tab" role="tablist">
+                <a class="nav-link " id="nav-eConfiq-tab" data-toggle="tab" href="#nav-eConfiq" role="tab" aria-controls="nav-eConfiq" aria-selected="true">Email Configuration</a>
+                <a class="nav-link active" id="nav-eTemplate-tab" data-toggle="tab" href="#nav-eTemplate" role="tab" aria-controls="nav-eTemplate" aria-selected="false">Email Template</a> 
+            </div>
+        </nav>
+
+        <div class="tab-content pt-5 pl-5" id="navTabContent">
+            <!-- email confiquration settings start here -->
+            <div class="tab-pane fade" id="nav-eConfiq" role="tabpanel" aria-labelledby="nav-eConfiq-tab"> 
+                <div class="col-lg-6">
+                    <form action="" class="form-group core__settings">
+                        <table class="table mb-0 ">
+                            <tr>
+                                <td>From Email</td>
+                                <td><input type="text" class="form-control" placeholder="admincorepcbl@petronas.com.my"></td>
+                            </tr>
+                            <tr>
+                                <td>SMTP Host</td>
+                                <td><input type="text" class="form-control" placeholder="CEN302"></td>
+                            </tr>
+                            <tr>
+                                <td>Encrytion</td>
+                                <td> 
+                                    <mat-radio-group aria-label="Select an option">
+                                        <mat-radio-button color='primary' value="1">None</mat-radio-button>
+                                        <mat-radio-button color='primary' value="2" class="ml-5">SSL</mat-radio-button>
+                                    </mat-radio-group>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    SMTP Port
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" placeholder="25">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Authentication</td>
+                                <td>
+                                    <button type="button" class="btn btn-lg btn-toggle" data-toggle="button" aria-pressed="false" autocomplete="off">
+                                      <div class="handle"></div>
+                                    </button>
+                                   
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>SMTP Username</td>
+                                <td><input type="text" class="form-control" placeholder="service.admincore"></td>
+                            </tr>
+                            <tr>
+                                <td>SMTP Password</td>
+                                <td><input type="password" class="form-control" placeholder=""></td>
+                            </tr>
+                            
+                        </table>
+                        <div class="text-right pt-5 pb-3">
+                            <button class="btn primary-solid-btn">Save Changes</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- email template settings start here -->
+            <div class="tab-pane fade show active" id="nav-eTemplate" role="tabpanel" aria-labelledby="nav-eTemplate-tab"> 
+                 <div class="col-lg-9">
+                    <form action="">
+                        <table class="table core__settings">
+                            <!-- row -->
+                            <tr>
+                                <td class="lable" style="vertical-align:top;">
+                                    Date Auto-Match Regexes 
+                                    <button class="btn exclam__btn"><img src="assets/icons/exclamation.png" alt="exclamation-icon"></button>
+                                </td>
+                                <td class="input_box">
+                                    <textarea name="" id="" cols="30" rows="6" class="form-control">\s(?P<dd>\d{1,2})\/(?P<mm>\d{1.2})\/(?P<yy>\d{4}) 
+\s(?P<dd>\d{1,2})-(?P<mm>\d{1.2})-(?P<yy>\d{4})
+\s(?P<dd>\d{1,2})\s(?P<mm>\d{1.2})\s(?P<yy>\d{4})
+\s(?P<dd>\d{1,2})\.(?P<mm>\d{1.2})\.(?P<yy>\d{4})
+                                    </textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="12" class="text-right">
+                                    <button class="btn primary-solid-btn">Edit</button>
+                                </td>
+                            </tr>
+
+                            <!-- row -->
+                            <tr>
+                                <td class="lable" style="vertical-align:top;">
+                                   <div class="d-flex align-items-center">
+                                        Sign Up E-mail Template
+                                        <button class="btn exclam__btn"><img src="assets/icons/exclamation.png" alt="exclamation-icon"></button>
+                                   </div>
+                                    <div class="text-sm text-muted text-italic">
+                                        * You can use these expressions as variables: <span>&#123;</span>&#123; User_name &#125;&#125;  <span>&#123;</span>&#123; User_email &#125;&#125;  <span>&#123;</span>&#123; Job_title &#125;&#125; <br>
+                                        Leave this field emplty to use default e-mail template
+                                    </div>
+                                </td>
+                                <td class="input_box">
+                                    <textarea name="" id="" cols="30" rows="12" class="form-control"> Dear { &#123; username &#125;&#125;,
+
+    Thank you for joing us at CORE Portal. We welcome you warmly to be part of us.
+
+    Username: { &#123; User_name &#125;&#125;
+    User email: { &#123; User_email &#125;&#125;
+    User email: { &#123; Job_title &#125;&#125;
+
+    Core Admin,
+    admincorepcbl@petronas.com.my
+
+    CORE is Centralized Online (data) Repository Ecosystem. It is PCBL'S one step center to access all structured and unstructured data.
+                                    </textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="12" class="text-right">
+                                    <button class="btn primary-solid-btn">Edit</button> 
+                                </td>
+                            </tr> 
+
+                            <!-- row -->
+                            <tr>
+                                <td class="lable" style="vertical-align:top;">
+                                    <div class="d-flex align-items-center">
+                                        Create User/Update User's Profile E-mail Template
+                                        <button class="btn exclam__btn"><img src="assets/icons/exclamation.png" alt="exclamation-icon"></button>
+                                    </div>
+                                </td>
+                                <td class="input_box">
+                                    <textarea name="" id="" cols="30" rows="12" class="form-control"> Dear { &#123; username &#125;&#125;,
+
+    Your Profile has been successfully created. Listed below are your credentials;
+
+    Username: { &#123; User_name &#125;&#125;
+    User email: { &#123; User_email &#125;&#125;
+    User email: { &#123; Job_title &#125;&#125;
+
+    Core Admin,
+    admincorepcbl@petronas.com.my
+
+    CORE is Centralized Online (data) Repository Ecosystem. It is PCBL'S one step center to access all structured and unstructured data.
+                                    </textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="12" class="text-right">
+                                    <button class="btn primary-solid-btn">Save</button>
+                                    <button class="btn primary-outline-btn">Cancel</button>
+                                </td>
+                            </tr>
+
+                            <!-- row -->
+                            <tr>
+                                <td class="lable" style="vertical-align:top;">
+                                    <div class="d-flex align-items-center">
+                                        Forgot Password E-mail Template
+                                        <button class="btn exclam__btn"><img src="assets/icons/exclamation.png" alt="exclamation-icon"></button>
+                                    </div>
+                                </td>
+                                <td class="input_box">
+                                    <textarea name="" id="" cols="30" rows="12" class="form-control"> Dear { &#123; username &#125;&#125;,
+
+    Your recently requested to reset your password for your CORE account. Please follow the link below to change your password.
+
+    { &#123;reseturl&#125;&#125; 
+
+    Core Admin,
+    admincorepcbl@petronas.com.my
+
+    CORE is Centralized Online (data) Repository Ecosystem. It is PCBL'S "one step center" to access all structured and unstructured data.
+                                    </textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="12" class="text-right">
+                                    <button class="btn primary-solid-btn">Edit</button> 
+                                </td>
+                            </tr>
+
+                            <!-- row -->
+                            <tr>
+                                <td class="lable" style="vertical-align:top;">
+                                    <div class="d-flex">
+                                        Project Creation/Project Update E-mail Template
+                                        <button class="btn exclam__btn"><img src="assets/icons/exclamation.png" alt="exclamation-icon"></button>
+                                    </div>
+                                </td>
+                                <td class="input_box">
+                                    <textarea name="" id="" cols="30" rows="16" class="form-control"> Dear { &#123; username &#125;&#125;,
+
+    This message is to modify the project members on the project creation/changes.
+    A new project under department { &#123; dept_name &#125;&#125; has been created/updated.
+
+    The details are as follow:- 
+    Project Title: { &#123; Project_title &#125;&#125;
+    Client Name: { &#123; Project_client &#125;&#125;
+    Project Category: { &#123; Category_name &#125;&#125;
+    Duration of Project: { &#123; Project_startDate &#125;&#125; - { &#123; Project_endDate &#125;&#125;
+
+    Core Admin,
+    admincorepcbl@petronas.com.my
+
+    CORE is Centralized Online (data) Repository Ecosystem. It is PCBL'S one step center to access all structured and unstructured data.
+                                    </textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="12" class="text-right">
+                                    <button class="btn primary-solid-btn">Edit</button> 
+                                </td>
+                            </tr>
+
+                            <!-- row -->
+                            <tr>
+                                <td class="lable" style="vertical-align:top;">
+                                    <div class="d-flex align-items-center">
+                                        Backup Status E-mail Template
+                                        <button class="btn exclam__btn"><img src="assets/icons/exclamation.png" alt="exclamation-icon"></button>
+                                    </div>
+                                </td>
+                                <td class="input_box">
+                                    <textarea name="" id="" cols="30" rows="8" class="form-control">This message is to notify on the current backup status.
+
+    Your Status for system backup is User email: { &#123;Backup_ScheduleStatus&#125;&#125;
+
+    CORE is Centralized Online (data) Repository Ecosystem. It is PCBL'S one step center to access all structured and unstructured data.
+    
+                                    </textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="12" class="text-right">
+                                    <button class="btn primary-solid-btn">Edit</button> 
+                                </td>
+                            </tr>
+
+                            <!-- row -->
+                            <tr>
+                                <td class="lable" style="vertical-align:top;">
+                                   <div class="d-flex align-items-center">
+                                        Document Upload E-mail Template
+                                        <button class="btn exclam__btn"><img src="assets/icons/exclamation.png" alt="exclamation-icon"></button>
+                                   </div>
+                                </td>
+                                <td class="input_box">
+                                    <textarea name="" id="" cols="30" rows="13" class="form-control">Dear { &#123;username&#125;&#125;
+
+    This message is to notify on the document's uploaded.
+
+    A new document, { &#123;Document_title&#125;&#125; under category tag { &#123;category&#125;&#125; has been { &#123;Upload_status&#125;&#125;
+    Kindly view the portal to learn more.
+
+    CORE Admin,
+    admincorepcbl@petronas.com.my
+
+    CORE is Centralized Online (data) Repository Ecosystem. It is PCBL'S one step center to access all structured and unstructured data.
+    
+                                    </textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="12" class="text-right">
+                                    <button class="btn primary-solid-btn">Edit</button> 
+                                </td>
+                            </tr>
+
+                            <!-- row -->
+                            <tr>
+                                <td class="lable" style="vertical-align:top;">
+                                    <div class="d-flex align-items-center">
+                                        New Page Created E-mail template
+                                        <button class="btn exclam__btn"><img src="assets/icons/exclamation.png" alt="exclamation-icon"></button>
+                                    </div>
+                                </td>
+                                <td class="input_box">
+                                    <textarea name="" id="" cols="30" rows="13" class="form-control">Dear { &#123;username&#125;&#125;
+
+    This message is to notify on the new page created.
+
+    A new page, { &#123;Page_title&#125;&#125; under department { &#123;Department_name&#125;&#125; has been created.
+    Kindly view the portal to learn more.
+
+    CORE Admin,
+    admincorepcbl@petronas.com.my
+
+    CORE is Centralized Online (data) Repository Ecosystem. It is PCBL'S one step center to access all structured and unstructured data.
+    
+                                    </textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="12" class="text-right">
+                                    <button class="btn primary-solid-btn">Edit</button> 
+                                </td>
+                            </tr>
+
+                            <!-- row -->
+                            <tr>
+                                <td class="lable" style="vertical-align:top;">
+                                    <div class="d-flex align-items-center">
+                                        New Post Created E-mail template
+                                        <button class="btn exclam__btn"><img src="assets/icons/exclamation.png" alt="exclamation-icon"></button>
+                                    </div>
+                                </td>
+                                <td class="input_box">
+                                    <textarea name="" id="" cols="30" rows="13" class="form-control">Dear { &#123;username&#125;&#125;
+
+    This message is to notify on the new post created.
+
+    A new post, { &#123;Post_title&#125;&#125; under page { &#123;Page_title&#125;&#125; has been created.
+    Kindly view the portal to learn more.
+
+    CORE Admin,
+    admincorepcbl@petronas.com.my
+
+    CORE is Centralized Online (data) Repository Ecosystem. It is PCBL'S one step center to access all structured and unstructured data.
+    
+                                    </textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="12" class="text-right">
+                                    <button class="btn primary-solid-btn">Edit</button> 
+                                </td>
+                            </tr>
+
+                            <!-- row -->
+                            <tr>
+                                <td class="lable" style="vertical-align:top;">
+                                    <div class="d-flex align-items-center">
+                                        OCR Status E-mail template
+                                        <button class="btn exclam__btn"><img src="assets/icons/exclamation.png" alt="exclamation-icon"></button>
+                                    </div>
+                                </td>
+                                <td class="input_box">
+                                    <textarea name="" id="" cols="30" rows="13" class="form-control">Dear { &#123;username&#125;&#125;
+
+    This message is to notify on the document's ORC status.
+
+    Your document, { &#123;Document_title&#125;&#125; ORC status { &#123;Document_status&#125;&#125;.
+    Kindly view the portal to learn more.
+
+    CORE Admin,
+    admincorepcbl@petronas.com.my
+
+    CORE is Centralized Online (data) Repository Ecosystem. It is PCBL'S one step center to access all structured and unstructured data.
+    
+                                    </textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="12" class="text-right">
+                                    <button class="btn primary-solid-btn">Edit</button> 
+                                </td>
+                            </tr>
+
+                        </table>
+                    </form>
+                 </div>
+            </div><!--./etemplateSetting-->
+        </div>
+
+    </div><!--.//advancedSettings-->
+
+</div>

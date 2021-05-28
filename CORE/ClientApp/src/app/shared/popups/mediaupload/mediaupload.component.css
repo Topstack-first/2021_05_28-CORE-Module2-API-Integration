@@ -1,0 +1,39 @@
+.heading {
+    font-size: 16px;
+    padding: 12px 0 4px 30px;
+    color: #808080;
+    position: relative;
+}
+
+.heading::after {
+    content: '';
+    width: 100px;
+    left: 28px;
+    bottom: 0;
+    position: absolute;
+    height: 2px;
+    background-color: #09B3A9;
+}
+
+.up__box {
+    min-height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.primary-solid-btn {
+    font-size: 16px;
+    font-weight: 300; 
+    display: inline-block;
+    padding: 0.7rem 1.4rem; 
+    border-radius: 0.4rem;
+    -webkit-border-radius: 0.4rem;
+    -moz-border-radius: 0.4rem;
+    -ms-border-radius: 0.4rem;
+    -o-border-radius: 0.4rem;
+}
+
+.card-footer {
+    background-color: #f2f2f2;
+}

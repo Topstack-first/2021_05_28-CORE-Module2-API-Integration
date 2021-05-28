@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BeicipFranLabERP</name>
+    </assembly>
+    <members>
+        <member name="T:BeicipFranLabERP.BackgroundServices.BackgroundServices">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:BeicipFranLabERP.Controllers.AdminSettings.BackupManagementController.SaveBackupSchedule(BeicipFranLabERP.ViewModel.SaveBackupSchedule)">
+            <summary>
+            Save The Backup Schedule and according to this data backup is automatically generated in the destination folder
+            </summary>
+            <param name="model">Parameter Name Interval can be 'Once daily' or 'Weekly'(Required)
+            ----
+            Parameter Name Destination is the destination folder location where backup is to be stored e.g 'E://NewFolder//' (Required)
+            ----
+            Parameter Name Backup_Type has 2 options which  is 'full' for the database backup and 'log' is for logs only backup
+            </param>
+            <returns></returns>
+        </member>
+        <member name="P:BeicipFranLabERP.ViewModel.SaveBackupSchedule.Backup_Type">
+            <summary>
+            has 2 options which  is 'full' for the database backup and 'log' is for logs only backup
+            </summary>
+        </member>
+        <member name="P:BeicipFranLabERP.ViewModel.SaveBackupSchedule.Interval">
+            <summary>
+            Interval can be 'Once daily' or 'Weekly'(Required)
+            </summary>
+        </member>
+        <member name="P:BeicipFranLabERP.ViewModel.SaveBackupSchedule.DestinationName">
+            <summary>
+            is the destination folder location where backup is to be stored e.g 'E://NewFolder//' 
+            </summary>
+        </member>
+    </members>
+</doc>

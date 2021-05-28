@@ -1,0 +1,138 @@
+
+<div class="card border-0">
+    <div class="card-header d-flex">
+        <h4 class="mb-0 text-primary" *ngIf="_data.type == 'category'">Delete Category</h4>
+        <h4 class="mb-0 text-primary" *ngIf="_data.type == 'subcategory'">Delete Subcategory</h4>
+        <h4 class="mb-0 text-primary" *ngIf="_data.type == 'department'">Delete Department</h4>
+        <h4 class="mb-0 text-primary" *ngIf="_data.type == 'event'">Delete Event</h4>
+        <h4 class="mb-0 text-primary" *ngIf="_data.type == 'location'">Delete Location</h4>
+        <h4 class="mb-0 text-primary" *ngIf="_data.type == 'stakeholder'">Delete StakeHolder</h4>
+        <h4 class="mb-0 text-primary" *ngIf="_data.type == 'well'">Delete Well</h4>
+        <button class="btn close__btn ml-auto" mat-dialog-close>&times;</button>
+    </div>
+    <div class="card-body">  
+        <p class="text-muted" *ngIf="_data.type == 'category'">
+            You can not delete a category which have sub-categories.
+            Please delete sub-categories first.
+        </p> 
+
+        <div *ngIf="_data.type == 'well'">
+          <p class="text-muted" >
+             You are going to delete well named HSE Buletin
+          </p>
+          <p class="text-muted" >
+              This well contains 20 Documents
+              Please assign this document another well
+           </p>
+           <mat-form-field appearance="outline"
+           class="example-full-width"
+           style="width: 100%">
+              <mat-label>Please Select</mat-label>
+              <mat-select>
+                <mat-option>None</mat-option>
+                <mat-option value="option1">Option 1</mat-option>
+                <mat-option value="option2">Option 2</mat-option>
+                <mat-option value="option3">Option 3</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+
+        <div *ngIf="_data.type == 'subcategory'">
+          <p class="text-muted" >
+             You are going to delete subcategory named HSE Buletin
+          </p>
+          <p class="text-muted" >
+              This subcategory contains 20 Documents
+              Please assign this document another subcategory
+           </p>
+           <mat-form-field appearance="outline"
+           class="example-full-width"
+           style="width: 100%">
+              <mat-label>Please Select</mat-label>
+              <mat-select>
+                <mat-option>None</mat-option>
+                <mat-option value="option1">Option 1</mat-option>
+                <mat-option value="option2">Option 2</mat-option>
+                <mat-option value="option3">Option 3</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+
+
+        <div *ngIf="_data.type == 'department'">
+        <p class="text-muted" >
+           You are going to delete department named Administration
+        </p>
+        <p class="text-muted" >
+            This subcategory contains 20 Documents
+            Please assign this document another department
+         </p>
+         <mat-form-field appearance="outline"
+         class="example-full-width"
+         style="width: 100%">
+            <mat-label>Please Select</mat-label>
+            <mat-select>
+              <mat-option>None</mat-option>
+              <mat-option value="option1">Option 1</mat-option>
+              <mat-option value="option2">Option 2</mat-option>
+              <mat-option value="option3">Option 3</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+
+        <div *ngIf="_data.type == 'event'">
+            <p class="text-muted" >
+               You are going to delete event named Meeting
+            </p>
+            <p class="text-muted" >
+                This subcategory contains 25 Documents
+                Please assign this document another department
+             </p>
+             <mat-form-field appearance="outline"
+             class="example-full-width"
+             style="width: 100%">
+                <mat-label>Please Select</mat-label>
+                <mat-select>
+                  <mat-option>None</mat-option>
+                  <mat-option value="option1">Option 1</mat-option>
+                  <mat-option value="option2">Option 2</mat-option>
+                  <mat-option value="option3">Option 3</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+
+
+        <div *ngIf="_data.type == 'location'">
+            <p class="text-muted" >
+               You are going to delete location named PCBL office, Brunei
+            </p>
+            <p class="text-muted" >
+                This subcategory contains 571 Documents
+                Please assign this document another department
+             </p>
+             <mat-form-field appearance="outline"
+             class="example-full-width"
+             style="width: 100%">
+                <mat-label>Please Select</mat-label>
+                <mat-select>
+                  <mat-option>None</mat-option>
+                  <mat-option value="option1">Option 1</mat-option>
+                  <mat-option value="option2">Option 2</mat-option>
+                  <mat-option value="option3">Option 3</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+     
+        <p class="text-muted" *ngIf="_data.type == 'stakeholder'">
+            you are going to delete stakeholder named PETRONAS International Carigali LTD.
+            <br />
+            Are you sure?
+        </p>
+    </div>
+
+    <div class="card-footer text-right py-3"> 
+        <button class="btn primary-solid-btn mx-0" *ngIf="_data.type == 'category'">View SubCategories</button>
+        <button class="btn primary-solid-btn delete__btn">Confirm Deletion</button>
+        <button class="btn primary-outline-btn" mat-dialog-close>Cancel</button>
+    </div>
+</div>

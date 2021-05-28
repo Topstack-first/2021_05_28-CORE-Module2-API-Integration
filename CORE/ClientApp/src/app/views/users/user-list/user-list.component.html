@@ -1,0 +1,57 @@
+<mat-sidenav-container>
+    <div class="container-fluid full-height">
+        <app-all-users *ngIf="viewVariable==='allUsers'" 
+        [filters]="filters"
+        [formFilter]="formFilter"
+        [departments]="departments"
+        [roles]="roles"
+        [permissions]="permissions"
+        (editUserEvent)="receiveUser($event)"
+        (newUserEvent)="newUserEvent($event)"
+        ></app-all-users>
+    </div>
+    <mat-sidenav #filters position="end" class="filters">        
+        <div fxLayout="row" fxLayoutAlign="left left" class="mat-elevation-z1">
+            <h3>Filters</h3>
+        </div>
+        <div perfectScrollbar>
+            <form novalidate [formGroup]="formFilter">
+            <div fxLayout="column" class="filter-field">
+                <p>Role:</p>
+                    <mat-select class="filter-select" formControlName="selectedRole">
+                        <mat-option *ngFor="let role of roles" [value]="role.roleId">
+                        {{role.roleName}}
+                    </mat-option>
+                </mat-select>
+            </div>
+            <div fxLayout="column" class="filter-field">
+                <p>Department:</p>
+                    <mat-select class="filter-select" formControlName="selectedDepartment">
+                    <mat-option *ngFor="let department of departments" [value]="department.departmentId">
+                        {{department.departmentName}}
+                    </mat-option>
+                </mat-select>
+            </div>
+            <div fxLayout="column" class="filter-field">
+                <p>Approval:</p>
+                    <mat-select class="filter-select" formControlName="selectedApproval">
+                    <mat-option *ngFor="let approval of approvalStatus" [value]="approval">
+                        {{approval}}
+                    </mat-option>
+                </mat-select>
+            </div>
+            <div fxLayout="column" class="filter-field">
+                <p>Status:</p>
+                    <mat-select class="filter-select" formControlName="selectedStatus">
+                    <mat-option *ngFor="let status of accountStatus" [value]="status">
+                        {{status}}
+                    </mat-option>
+                </mat-select>
+            </div>
+                <div fxLayout="column" class="filter-field">
+                    <button mat-stroked-button type="reset">Clear Filter</button>
+                </div>
+            </form>
+        </div>
+    </mat-sidenav>
+</mat-sidenav-container>

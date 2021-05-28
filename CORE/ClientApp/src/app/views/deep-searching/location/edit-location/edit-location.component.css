@@ -1,0 +1,65 @@
+
+
+
+.lable_box {
+    width: 150px;
+    padding-top: .3rem;
+    color: #09B3A9;
+}
+
+.input_box {
+    width: calc(100% - 150px);
+    position: relative;
+}
+
+.media__btn {  
+    padding: 6px 10px 6px 10px !important;
+    width: 113px;
+    position: absolute;
+    top: 0%;
+    right: -123px;
+}
+
+ 
+input[type="color"] {
+	-webkit-appearance: none;
+	border: none;
+	width: 52px;
+	height: 32px;
+    padding: 0%;
+}
+input[type="color"]::-webkit-color-swatch-wrapper {
+	padding: 0;
+}
+input[type="color"]::-webkit-color-swatch {
+	border: none;
+}
+
+.picker__box {
+    display: flex;
+    border: 1px solid #c9cabf;
+}
+
+.picker__box p {
+    font-size: 15px;
+    color: #888;
+    margin-bottom: 0;
+    padding-left: 1rem;
+    padding-top: 5px;
+}
+
+
+.primary-outline-btn,
+.primary-solid-btn {
+    font-size: 16px;
+    font-weight: 300; 
+    display: inline-block;
+    padding: 0.7rem 1.4rem; 
+    border-radius: 0.4rem;
+    -webkit-border-radius: 0.4rem;
+    -moz-border-radius: 0.4rem;
+    -ms-border-radius: 0.4rem;
+    -o-border-radius: 0.4rem;
+}
+
+

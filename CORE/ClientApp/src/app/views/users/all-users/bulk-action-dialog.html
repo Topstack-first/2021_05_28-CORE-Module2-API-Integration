@@ -1,0 +1,48 @@
+<h1 mat-dialog-title style="box-shadow: 0px 2px 4px rgb(0 0 0 / 10%);font-size: x-large;">
+    {{title}}
+    <button style="float: right;border: none;background-color: transparent;" (click)="close()">X</button>
+</h1>
+<div mat-dialog-content>
+    <div class="flex-p col" fxLayout="column" style="width: 25vw;color: gray;">
+        <p style="text-align: center;color:#09B3A9;font-size: large;">The following users are selected:</p>
+        <div class="addScroll">
+            <ul class="list-group list-group-flush my-2">
+                <li class="list-group-item" *ngFor="let user of users; let i = index">
+                    <div class="d-flex">
+                        <div>{{user.userName}}</div>
+                        <mat-icon class="ml-auto" style="color: black; font-size: 20px;" (click)="removeUser(i)">person_remove</mat-icon>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <form class="my-2" *ngIf="api != 4">
+            <div class="row">
+                <div class="col">
+                    <label style="text-align: center;font-size: large;" class="mr-sm-2">{{ddownKey}}</label>
+                </div>
+                <div class="col" *ngIf="api != 3">
+                    <select class="p-2 form-control" name="ddownValueSelected" [(ngModel)]="selectedValue">
+                        <option *ngFor="let option of ddownValue">{{option}}</option>
+                    </select>
+                </div>
+                <div class="col" *ngIf="api == 3">
+                    <select class="p-2 form-control" name="ddownValueSelected" [(ngModel)]="selectedValue">
+                        <option *ngFor="let option of ddownValue" [value]="option.roleId">{{option.roleName}}</option>
+                    </select>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div mat-dialog-actions align="end" *ngIf="api != 4">
+    <a class="btn btn-primary mr-3 px-3" (click)="apply()">Apply</a>
+    <a class="btn btn-outline-danger" (click)="close()">Cancel</a>
+    <!-- <button class="btn-delete" (click)="close()" style="margin-right: 10px;">Confirm</button>
+    <button class="btn-cancel" (click)="close()" style="margin-right: 15px;">Cancel</button> -->
+</div>
+<div mat-dialog-actions align="end" *ngIf="api == 4">
+    <a class="btn btn-danger mr-3 px-3" (click)="deleteUsers()">Delete Users</a>
+    <a class="btn btn-outline-danger" (click)="close()">Cancel</a>
+    <!-- <button class="btn-delete" (click)="close()" style="margin-right: 10px;">Confirm</button>
+    <button class="btn-cancel" (click)="close()" style="margin-right: 15px;">Cancel</button> -->
+</div>

@@ -1,0 +1,331 @@
+
+
+<h2 class="page__header">
+    Search Engine Index Management
+</h2>
+
+<nav class="">
+    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+      <a class="nav-link active mr" id="nav-index-tab" data-toggle="tab" href="#nav-index" role="tab" aria-controls="nav-index" aria-selected="true">Indexing</a>
+      <a class="nav-link" id="nav-search-tab" data-toggle="tab" href="#nav-search" role="tab" aria-controls="nav-search" aria-selected="false">Searching</a>
+      <a class="nav-link" id="nav-synonymus-tab" data-toggle="tab" href="#nav-synonymus" role="tab" aria-controls="nav-synonymus" aria-selected="false">Synonyms</a>
+      <a class="nav-link" id="nav-stopwords-tab" data-toggle="tab" href="#nav-stopwords" role="tab" aria-controls="nav-stopwords" aria-selected="false">Stopwords</a>
+    </div>
+</nav>
+
+<div class="c-container pl-5">
+
+    <div class="tab-content" id="navTabContent">
+
+        <!-- Indexing start here -->
+        <div class="tab-pane fade show active" id="nav-index" role="tabpanel" aria-labelledby="nav-index-tab">
+            <button class="btn primary-solid-btn ml-0">Build Index</button>
+
+            <div class="progress__box">
+                <div class="active"></div>
+            </div>
+
+            <form action="">
+                <textarea name="" id="" cols="30" rows="14" class="form-control rounded-0"></textarea>
+                <div class="text-right pt-3">
+                    <button class="btn primary-solid-btn">Save Changes</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- searching start here -->
+        <div class="tab-pane fade" id="nav-search" role="tabpanel" aria-labelledby="nav-search-tab">
+            <div class="col-lg-8">
+                <form action="" class="form-group core__settings">
+                    <table class="table mb-0 ">
+                        <tr>
+                            <td>Default operator</td>
+                            <td>
+                                <select name="" id="">
+                                    <option value="1">AND-require all terms</option>
+                                    <option value="1">AND-require all terms</option>
+                                    <option value="1">AND-require all terms</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Fallback to OR</td>
+                            <td>
+                                <mat-checkbox>Disable the OR fallback</mat-checkbox>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Default order </td>
+                            <td>
+                                <select name="" id="">
+                                    <option value="1">Relevance</option>
+                                    <option value="2">Lorem, ipsum dolor.</option>
+                                    <option value="3">Lorem, ipsum dolor.</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Keyword matching</td>
+                            <td>
+                                <select name="" id="">
+                                    <option value="1">Portial words</option>
+                                    <option value="2">Lorem, ipsum dolor.</option>
+                                    <option value="3">Lorem, ipsum dolor.</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="vertical-align:top;">Weights</td>
+                            <td>
+                                <table class="table inner__table">
+                                    <thead>
+                                        <th>Element</th>
+                                        <th>Weight</th>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Content</td>
+                                            <td><input type="text" class="weight-control"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Titles</td>
+                                            <td><input type="text" class="weight-control"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Category</td>
+                                            <td><input type="text" class="weight-control"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Subategory</td>
+                                            <td><input type="text" class="weight-control"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Custom Content</td>
+                                            <td><input type="text" class="weight-control"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Description</td>
+                                            <td><input type="text" class="weight-control"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Boost exact matches</td>
+                            <td><mat-checkbox>Give boost to exact matches.</mat-checkbox></td>
+                        </tr>
+                        <tr>
+                            <td style="vertical-align:top;">Category restriction</td>
+                            <td>
+                                <div class="scroll__box">
+                                    <ul class="list-unstyled">
+                                        <li><mat-checkbox>CORE V1 </mat-checkbox></li>
+                                        <li class="pl-3"><mat-checkbox>Exploration </mat-checkbox></li>
+                                        <li><mat-checkbox>Exploration </mat-checkbox></li>
+                                        <li><mat-checkbox>Finance and IT </mat-checkbox></li>
+                                        <li><mat-checkbox>Lorem, ipsum dolor. </mat-checkbox></li>
+                                        <li><mat-checkbox>Lorem, ipsum dolor. </mat-checkbox></li>
+                                        <li><mat-checkbox>Lorem, ipsum dolor. </mat-checkbox></li>
+                                        <li><mat-checkbox>Lorem, ipsum dolor. </mat-checkbox></li>
+                                        <li><mat-checkbox>Lorem, ipsum dolor. </mat-checkbox></li>
+                                        <li><mat-checkbox>Lorem, ipsum dolor. </mat-checkbox></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="12">
+                                <div class="text-right pt-5 pb-3">
+                                    <button class="btn primary-solid-btn">Save Changes</button>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+
+        <!-- sysnonyms start here -->
+        <div class="tab-pane fade" id="nav-synonymus" role="tabpanel" aria-labelledby="nav-synonymus-tab">
+            <div class="row">
+                <div class="col-1">
+                    Synonyms
+                </div>
+                <div class="col-11">
+                    <form action="">
+                        <textarea name="" id="" cols="30" rows="10" class="form-control"></textarea>
+                        <div class="text-sm text-muted pt-5">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis ullam obcaecati, laborum cum animi nisi aliquid nesciunt iure iste blanditiis libero aliquam nemo consequatur eum quia et labore harum inventore.
+                            <br>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quod ut praesentium voluptate ad pariatur ratione autem impedit, saepe delectus. Optio, iure. <br>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis cum maiores, in at assumenda quod facilis deserunt suscipit reiciendis impedit facere omnis.
+                        </div>
+
+                        <div class="text-right pt-5">
+                            <button class="btn primary-solid-btn">Save Options</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- sysnonyms start here -->
+        <div class="tab-pane fade" id="nav-stopwords" role="tabpanel" aria-labelledby="nav-stopwords-tab">
+            <div class="col-lg-8">
+                <form action="" class="form-group core__settings">
+
+                    <table class="table ver__table mb-0 ">
+                        <tr>
+                            <td colspan="12"><p class="text-primary fs-18">Stopwords</p></td>
+                        </tr>
+                        <tr>
+                            <td>Stopword(s) to add</td>
+                            <td>
+                                <input type="text" class="form-control">
+                                <div class="text-sm">Enter a word here to add it to the first list of stopwords.</div>
+                                <button class="primary-outline-btn">Add</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Current stopwords</td>
+                            <td>
+                                <span class="word">a</span> <span class="word">about</span> <span class="word">above</span> <br>
+                                <span class="word">accross</span> <span class="word">after</span> <span class="word">afterwards</span> <br>
+                                <span class="word">again</span> <span class="word">against</span> <span class="word">all</span> <span class="word">almost</span>
+                                <div class="text-sm">Click a word to remove it from stopwords.</div>
+                                <button class="btn primary-outline-btn">Remove All Stopwords</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Exportable list of stopwords</td>
+                            <td><input type="text" class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="12"><p class="pt-4 pb-2 fs-18 text-primary">Content stopwords</p></td>
+                        </tr>
+                        <tr>
+                            <td>Content stopword(s) to add</td>
+                            <td>
+                                <input type="text" class="form-control">
+                                <button class="primary-outline-btn">Add</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Current content stopwords</td>
+                            <td>
+                                <mat-checkbox>Check me!</mat-checkbox> <br>
+                                <button class="primary-outline-btn">Remove All Content Stopwords</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Exportable list of content stopwords</td>
+                            <td>
+                                <input type="text" class="form-control">
+                                <div class="text-sm">You can copy the list of content stopwords from here if you want to back up the list.</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="12">
+                                <p class="pt-4 pb-2 fs-18 text-primary">25 most common words in the index</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Stopword Candidates</td>
+                            <td>
+                                study (7) <span class="word">Add to stopword</span> <span class="word">Add to content stopwords</span> <br>
+                                conceptual (7) <span class="word">Add to stopwords</span> <span class="word">Add to content stopwords</span> <br>
+                                wisma (7) <span class="word">Add to stopwords</span> <span class="word">Add to content stopwords</span>
+                            </td>
+                        </tr>
+                    </table>
+
+                </form>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+
+<div class="card border-0 p-5">
+    <div class="col-lg-5">
+        <div class="lead text-primary pb-4">Edit HSE Bulletin subcategory:</div>
+        <div class="d-flex mb-4">
+            <div class="lable_box">
+                Name
+            </div>
+            <div class="input_box">
+                <input type="text" class="form-control rounded-0">
+            </div>
+        </div>
+        <div class="d-flex mb-2">
+            <div class="lable_box">
+                SubCategory Alias (Separated by '|')
+            </div>
+            <div class="input_box">
+                <input type="text" class="form-control rounded-0">
+            </div>
+        </div>
+        <div class="d-flex mb-4">
+            <div class="lable_box">
+                Icon Url
+            </div>
+            <div class="input_box d-flex">
+                <input type="text" class="form-control rounded-0">
+                <button class="btn primary-outline-btn media__btn" (click)="openMedia()">Select Media</button>
+            </div>
+        </div>
+
+        <div class="text-right pt-5">
+            <button class="btn primary-solid-btn mx-0">Update</button>
+        <button class="btn primary-outline-btn" mat-dialog-close>Cancel</button>
+        </div>
+    </div>
+
+</div> -->

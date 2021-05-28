@@ -1,0 +1,192 @@
+.header{
+    font-size: large;
+    color: #09B3A9;
+    font-weight: bold;
+    box-shadow: 0px 2px 4px rgb(0 0 0 / 10%);
+    padding: 10px;
+}
+
+.btn-add-document
+{
+    margin-top: 17px;
+    margin-right: 40px;
+    background-color: #09B3A9;
+    color: white;
+    border: none;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-radius: 20px;
+    font-size: medium;
+    z-index: 10001;
+    position: relative;
+}
+.btn-add-document:hover
+{
+    background-color: #0b9188;
+}
+.btn-add-document:active
+{
+    background-color: #09726b;
+}
+
+.bulk-action-select{
+    padding:5px;
+    margin:10px;
+    width: 180px;
+    border: solid 1px lightgray;
+    text-align: center;
+    border-radius: 10px;
+}
+.search-box{
+    display: inline-block;
+    border: solid lightgray 1px;
+    border-radius: 5px;
+    padding: 3px;
+}
+.search-input{
+    border: none;
+}
+.search-input:focus{
+    outline: none;
+}
+.btn-filter{
+    display: inline-flex;
+    align-items: center;
+    border: solid lightgray 1px;
+    border-radius: 5px;
+    margin-left: 10px;
+    height: 32px;
+    vertical-align: middle;
+    padding: 0 8px;
+    min-width: auto;
+}
+.page-size-select{
+    padding:5px;
+    margin:10px;
+    border-radius: 5px;
+    width: 70px;
+    border: solid 1px lightgray;
+    text-align: center;
+}
+.table-layout{
+    margin: 40px;
+}
+.table-border{
+    border: solid lightgray 1px;
+}
+.btn-apply
+{
+    background-color: #47aeff;
+    color: white;
+    border: none;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 10px;
+    font-size: small;
+    margin-top: 11px;
+}
+.btn-apply:hover
+{
+    background-color: #3da5f5;
+}
+.btn-apply:active
+{
+    background-color: #3490d6;
+}
+
+
+.mat-column-select {
+    flex: none;
+    width: 3%;
+    text-align: center;
+    padding:10px !important;
+}
+.mat-column-username {
+    flex: none;
+    width: 9%;
+    color: gray;
+    padding: 3px;
+}
+.mat-column-name {
+    flex: none;
+    width: 9%;
+    color: gray;
+    text-align: center;
+    padding: 3px;
+}
+.mat-column-email {
+    flex: none;
+    width: 9%;
+    text-align: center;
+    color: gray;
+    padding: 3px;
+}
+.mat-column-roles {
+    flex: none;
+    width: 9%;
+    text-align: center;
+    color: gray;
+    padding: 3px;
+}
+.mat-column-status {
+    flex: none;
+    width: 9%;
+    text-align: center;
+    color: gray;
+    padding: 3px;
+}
+.mat-column-department {
+    flex: none;
+    width: 9%;
+    text-align: center;
+    color: gray;
+    padding: 3px;
+}
+.mat-column-document-attached {
+    flex: none;
+    width: 8%;
+    text-align: center;
+    color: gray;
+    padding: 3px;
+}
+.mat-column-post {
+    flex: none;
+    width: 8%;
+    text-align: center;
+    color: gray;
+    padding: 3px;
+}
+.mat-column-last-login {
+    flex: none;
+    width: 8%;
+    text-align: center;
+    color: gray;
+    padding: 3px;
+}
+.mat-column-login-times {
+    flex: none;
+    width: 8%;
+    text-align: center;
+    color: gray;
+    padding: 5px !important;;
+}
+.mat-column-action {
+    flex: none;
+    width: 11%;
+    text-align: center;
+}
+
+.mat-header-cell{
+    color: #09B3A9;
+    font-size: medium;
+    text-align: center;
+}
+
+.addScroll{
+    overflow-y:auto;
+    max-height: 300px;
+}

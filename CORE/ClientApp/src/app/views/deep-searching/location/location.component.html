@@ -1,0 +1,40 @@
+<div class="c-container p-5">
+    <div class="row mx-0 search__box justify-content-center"> 
+        <input type="text" class="input rounded" placeholder="Place holder text will be here">
+        <button class="btn primary-outline-btn" (click)="openMedia()">Select Media</button>
+        <button class="btn primary-solid-btn">Update Default Icon</button>
+    </div>
+
+    <div class="data__table two__col_w pt-5">
+        <table class="table responsive-table border-0">
+            <tbody>
+                <!--  -->
+                <tr>
+                    <td>
+                        <div class="name">HSE Emergency Documents</div>
+                    </td>
+                    <td>
+                        <button class="btn action__btn" routerLink="/core/deep-search-setting/editlocation"><img src="assets/icons/edit.png" alt="pencil-icon"></button>
+                        <button class="btn action__btn" (click)="deletelocation()"><img src="assets/icons/trash.png" alt="pencil-icon"></button> 
+                    </td>
+                </tr>
+                <!--  -->
+                <tr>
+                    <td>
+                        <div class="name">HSE Emergency Documents</div>
+                    </td>
+                    <td>
+                        <button class="btn action__btn" routerLink="/core/deep-search-setting/editlocation"><img src="assets/icons/edit.png" alt="pencil-icon"></button>
+                        <button class="btn action__btn" (click)="deletelocation()"><img src="assets/icons/trash.png" alt="pencil-icon"></button> 
+                    </td>
+                </tr>
+              
+            </tbody>
+        </table>
+        <div class="text-right pt-5" style="padding-right: 10%;">
+            <button class="btn btn-primary">Update Sorting</button>
+            <button class="btn btn-primary ml-4" routerLink="/core/deep-search-setting/createlocation">Add New</button>
+        </div>
+    </div>
+
+</div>

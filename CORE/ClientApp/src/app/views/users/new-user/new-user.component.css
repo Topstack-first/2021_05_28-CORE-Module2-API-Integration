@@ -1,0 +1,129 @@
+.header{
+    font-size: large;
+    color: #09B3A9;
+    font-weight: bold;
+    box-shadow: 0px 2px 4px rgb(0 0 0 / 10%);
+    padding: 10px;
+}
+
+.subheader{
+    font-size: medium;
+    color: #000000;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 0px;
+}
+
+/* h2.heading{
+	font-size: 18px;
+	text-transform: uppercase;
+	font-weight: 300;
+	text-align: left;
+	color: #506982;
+	border-bottom: 1px solid #506982;
+	padding-bottom: 3px;
+	margin-bottom: 20px;
+} */
+:host .card.card-body {
+	position: relative;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+}
+
+:host .card.card-body .form-horizontal .form-group:last-child {
+	margin-bottom: 0;
+}
+
+:host .card.card-body .form-horizontal .form-control:focus {
+	border-color: #4a6f80;
+	box-shadow: 0 0 0 0.2rem rgba(74, 111, 128, 0.15);
+}
+
+:host .card.card-body + .card {
+	margin-top: 2rem;
+}
+
+:host .card.card-body > .heading {
+	font-size: 1.25rem;
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	transform: translateY(-50%);
+	padding: .5rem;
+	margin-bottom: 0;
+	background-color: #fff;
+}
+
+.form-control:focus {
+    border-color: #4a6f80;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #698c9c;
+}
+
+.hide {
+  display: none;
+}
+    
+.passwordDiv:hover ~ .hide {
+  display: block;
+  color: red;
+}
+
+textarea
+{
+  width:100%;
+  resize: none;
+}
+
+.container-fluid .btn-holder {
+    justify-content: flex-end;
+    display: flex;
+}
+
+/* .btn-process
+{
+    background-color: #09B3A9;
+    color: white;
+    border: none;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-radius: 20px;
+    font-size: medium;
+    z-index: 10001;
+    position: relative;
+}
+.btn-process:hover
+{
+    background-color: #0b9188;
+}
+.btn-process:active
+{
+    background-color: #09726b;
+}
+
+.btn-cancel
+{
+    margin-top: 17px;
+    margin-right: 40px;
+    background-color: white;
+    color: #09B3A9;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border: 3px #09B3A9;
+    border-radius: 20px;
+    font-size: medium;
+    z-index: 10001;
+    position: relative;
+}*/
+.btn-cancel:hover
+{
+    background-color: hsl(180, 5%, 76%);
+}
+.btn-cancel:active
+{
+    background-color: #495857;
+} 

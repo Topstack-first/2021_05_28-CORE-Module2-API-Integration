@@ -1,0 +1,105 @@
+<div class="container-fluid">
+    <div class="row align-items-end mb-5">
+        <div class="col col-fixed-size">
+            <div class="alert alert-info mb-0">
+                <img width="100%" height="100%" [src]="imageUrl" alt="No Profile Pic">
+                <!-- <svg width="64" height="64" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M19,19H5V5H19M19,3H5A2,2 0 0,0 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5A2,2 0 0,0 19,3M13.96,12.29L11.21,15.83L9.25,13.47L6.5,17H17.5L13.96,12.29Z" />
+                    <img src="D:\Pictures\teksar(2).jpg" alt="No Profile Pic">
+                    <img src="./assets/images/CORE_Logo.png"" />
+                    <img src="D:\Pictures\teksar(2).jpg" />
+                </svg> -->
+            </div>
+        </div>
+        <div class="col">
+            <div class="d-flex align-items-center mb-2">
+                <h2 class="mb-0 mr-2 font-weight-normal">
+                    <ng-container>{{loggedUser$.userName }}</ng-container>
+                </h2>
+                <svg class="text-success" width="16" height="16" viewBox="0 0 24 24">
+                    <path fill="currentColor"
+                        d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z" />
+                </svg>
+            </div>
+            <div>
+                <ng-container>{{ loggedUser$.jobTitle }}</ng-container>
+                <span class="px-2 text-muted">|</span>
+                <ng-container>{{ loggedUser$.department }}</ng-container>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col col-fixed-size">
+            <div class="card">
+                <div class="card-header">Biography Information</div>
+                <div class="card-body">
+                    <p class="mb-0">
+                        <ng-container>{{ loggedUser$.userBiography }}</ng-container>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card mb-5">
+                <div class="card-header">About</div>
+                <div class="card-body">
+                    <div class="row mb-3">
+                        <div class="col-2">First Name :</div>
+                        <div class="col">
+                            <ng-container>
+                                <span>{{ loggedUser$.firstName }}</span>
+                            </ng-container>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-2">Last Name :</div>
+                        <div class="col">
+                            <ng-container>
+                                <span>{{ loggedUser$.lastName }}</span>
+                            </ng-container>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-2">Role :</div>
+                        <div class="col">
+                            <ng-container>
+                                <span class="fakelinks" (click)="showCapabilities();">{{userRole.roleName}}</span>
+                            </ng-container>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mb-5">
+                <div class="card-header">Contact Information</div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-2">Email :</div>
+                        <div class="col">
+                            <ng-container>
+                                <a href="mailto:{{ loggedUser$.userEmail }}">{{ loggedUser$.userEmail }}</a>
+                            </ng-container>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-right">
+                <a [routerLink]="['/core/users', loggedUser$.userId, 'update']" class="btn btn-primary btn-lg">Edit
+                    Profile</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<ng-template #noData>
+    <span class="text-muted">N/A</span>
+</ng-template>
+
+<ng-template #noJobTitle>
+    <span class="text-muted">No job title</span>
+</ng-template>
+
+<ng-template #noDepartment>
+    <span class="text-muted">No department</span>
+</ng-template>

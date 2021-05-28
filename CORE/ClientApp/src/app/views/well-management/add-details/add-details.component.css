@@ -1,0 +1,40 @@
+
+
+.lable {
+    width: 120px;
+    color: #0b9188;
+}
+
+.lg_lable {
+    width: 135px;
+    color: #0b9188;
+}
+
+.input_box {
+    width: calc(100% - 130px);
+}
+
+.lg_input_box {
+    width: calc(100% - 145px);
+}
+
+.form-control {
+    border-radius: 0%;
+    -webkit-border-radius: 0%;
+    -moz-border-radius: 0%;
+    -ms-border-radius: 0%;
+    -o-border-radius: 0%;
+}
+
+.d-flex {
+    margin-top: 20px;
+}
+
+.media__btn {
+    padding: 4px 8px 5px 8px;
+    width: 10rem;
+}
+
+.media__input {
+    width: calc(100% - 11rem);
+}

@@ -1,0 +1,37 @@
+<div class="card border-0 p-5"> 
+    <div class="col-lg-5">
+        <div class="lead text-primary pb-4">{{headingtext}}</div>
+        <div class="d-flex mb-4">
+            <div class="lable_box">
+                Name
+            </div>
+            <div class="input_box">
+                <input type="text" class="form-control rounded-0">
+            </div>
+        </div>
+        <div class="d-flex mb-2">
+            <div class="lable_box">
+                Alias (Separated by '|')
+            </div>
+            <div class="input_box">
+                <input type="text" class="form-control rounded-0">
+            </div>
+        </div>
+        <div class="d-flex mb-4">
+            <div class="lable_box">
+                Icon Url
+            </div>
+            <div class="input_box d-flex">
+                <input type="text" class="form-control rounded-0">
+                <button class="btn primary-outline-btn media__btn" (click)="openMedia()">Select Media</button>
+            </div>
+        </div>
+         
+        <div class="text-right pt-5">
+            <button class="btn primary-solid-btn mx-0" *ngIf="isedit">Update</button>
+            <button class="btn primary-solid-btn mx-0" *ngIf="!isedit">Create</button>
+        <button class="btn primary-outline-btn" routerLink="/core/deep-search-setting/eve">Cancel</button>
+        </div>
+    </div>  
+     
+</div>

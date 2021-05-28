@@ -1,0 +1,93 @@
+<h2 class="page__header">
+    CORE | Well Management <span> | {{headingtext}}</span>
+</h2>
+<div class="p-5 col-lg-9">
+    <form action="" class="form-group">
+        <div class="row">
+            <!-- left col -->
+            <div class="col-12 d-flex">
+                <div class="lable lg_lable">Name</div>
+                <div class="input_box lg_input_box"><input type="text" class="form-control"></div>
+            </div>
+            <div class="col-12 d-flex">
+                <div class="lable lg_lable">Icon URL</div>
+                <div class="input_box lg_input_box mt-0 d-flex"><input type="text" class="form-control media__input">
+                    <button class="btn primary-outline-btn media__btn" (click)="openMedia()">Select Media</button>
+                </div>
+            </div>
+            <div class="col-md-6 d-flex">
+                <div class="lable">Well Alias (Separated by '|')</div>
+                <div class="input_box col"><input type="text" class="form-control"></div>
+            </div>
+            <div class="col-md-6 d-flex">
+                <div class="lable">Block Name</div>
+                <div class="input_box col"><input type="text" class="form-control"></div>
+            </div>
+            <div class="col-md-6 d-flex">
+                <div class="lable">Field Name</div>
+                <div class="input_box col"><input type="text" class="form-control"></div>
+            </div>
+            <div class="col-md-6 d-flex">
+                <div class="lable">Basin Name</div>
+                <div class="input_box col"><input type="text" class="form-control"></div>
+            </div>
+
+            <div class="col-md-6 d-flex">
+                <div class="lable">Latitude</div>
+                <div class="input_box col"><input type="text" class="form-control"></div>
+            </div>
+
+            <div class="col-md-6 d-flex">
+                <div class="lable">Longitude</div>
+                <div class="input_box col"><input type="text" class="form-control"></div>
+            </div>
+
+            <div class="col-md-6 d-flex">
+                <div class="lable">X Easing</div>
+                <div class="input_box col"><input type="text" class="form-control"></div>
+            </div>
+
+            <div class="col-md-6 d-flex">
+                <div class="lable">Y Norting</div>
+                <div class="input_box col"><input type="text" class="form-control"></div>
+            </div>
+
+            <div class="col-md-6 d-flex">
+                <div class="lable">Spud Date</div>
+                <div class="input_box col"><input type="text" class="form-control"></div>
+            </div>
+
+            <div class="col-md-6 d-flex">
+                <div class="lable">Completion Date</div>
+                <div class="input_box col"><input type="text" class="form-control"></div>
+            </div>
+
+            <div class="col-md-6 d-flex">
+                <div class="lable">TD</div>
+                <div class="input_box col"><input type="text" class="form-control"></div>
+            </div>
+
+            <div class="col-md-6 d-flex">
+                <div class="lable">Well Type</div>
+                <div class="input_box col"><input type="text" class="form-control"></div>
+            </div>
+
+            <div class="col-md-6 d-flex">
+                <div class="lable">MDDF</div>
+                <div class="input_box col"><input type="text" class="form-control"></div>
+            </div>
+
+            <div class="col-md-6 d-flex">
+                <div class="lable">TVDDF</div>
+                <div class="input_box col"><input type="text" class="form-control"></div>
+            </div>
+
+            <div class="col-12 text-right pt-5">
+                <button *ngIf="!isedit" class="btn primary-solid-btn">Create Well</button>
+                <button *ngIf="isedit" class="btn primary-solid-btn">Update Well</button>
+                <button class="btn primary-outline-btn" routerLink="/core/well-management">Cancel</button>
+            </div>
+        </div>
+        <!--.//row-->
+    </form>
+</div>
