@@ -15,9 +15,6 @@ export class CategoriesComponent implements OnInit {
   ngOnInit(): void {
 
   }
-
-
-
   openMedia() {
     this.dialog.open(MediauploadComponent, {
       maxWidth: '700px',

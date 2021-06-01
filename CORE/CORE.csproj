@@ -14,8 +14,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="5.0.4" />
-    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="5.0.4" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="5.0.6" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="5.0.6" />
     <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="5.0.1" />
     <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="5.0.5" />
@@ -36,6 +36,12 @@
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="6.1.1" />
     <PackageReference Include="Microsoft.SqlServer.SqlManagementObjects" Version="161.46367.54" />
     <PackageReference Include="ncrontab" Version="3.3.1" />
+
+    <PackageReference Include="NSwag.AspNetCore" Version="13.11.1" />
+    <PackageReference Include="NSwag.MSBuild" Version="13.11.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
   </ItemGroup>
 
   <ItemGroup>
@@ -80,5 +86,9 @@
       </ResolvedFileToPublish>
     </ItemGroup>
   </Target>
+  <Target Name="NSwag" AfterTargets="Build" Condition="'$(NSwagExe_Net50)' != ''">
+	 <Message Text="Should run after build" Importance="High" />
+		<Exec Command="$(NSwagExe_Net50) run services.nswag" />
+	</Target>
 
 </Project>
